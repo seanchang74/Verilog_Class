@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 14 10:16:00 2021
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : ringCounter
+Top-level Entity Name : ringCounter
+Family : MAX II
+Device : EPM570T144C5
+Timing Models : Final
+Total logic elements : 62 / 570 ( 11 % )
+Total pins : 10 / 116 ( 9 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
