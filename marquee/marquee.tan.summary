@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.210 ns
-From           : marquee[8]
-To             : Q[8]
+Actual Time    : 14.709 ns
+From           : marquee[7]
+To             : Q[7]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 94.55 MHz ( period = 10.576 ns )
-From           : cnt[4]
-To             : cnt[5]
+Actual Time    : 101.34 MHz ( period = 9.868 ns )
+From           : cnt[7]
+To             : cnt[12]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
