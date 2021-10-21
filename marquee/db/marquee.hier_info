@@ -1,17 +1,17 @@
 |marquee
 reset => marquee[12].ACLR
-reset => marquee[11].ACLR
-reset => marquee[10].PRESET
+reset => marquee[11].PRESET
+reset => marquee[10].ACLR
 reset => marquee[9].PRESET
 reset => marquee[8].PRESET
 reset => marquee[7].PRESET
 reset => marquee[6].PRESET
 reset => marquee[5].PRESET
-reset => marquee[4].PRESET
+reset => marquee[4].ACLR
 reset => marquee[3].PRESET
 reset => marquee[2].PRESET
 reset => marquee[1].PRESET
-reset => marquee[0].ACLR
+reset => marquee[0].PRESET
 clk => cnt[26].CLK
 clk => cnt[25].CLK
 clk => cnt[24].CLK

@@ -56,3 +56,4 @@ set_location_assignment PIN_111 -to Q[10]
 set_location_assignment PIN_117 -to Q[11]
 set_location_assignment PIN_89 -to reset
 set_global_assignment -name MISC_FILE "C:/Verilog_Class/marquee/marquee.dpf"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

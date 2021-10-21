@@ -1,5 +1,5 @@
 Flow report for marquee
-Thu Oct 14 11:34:52 2021
+Thu Oct 21 10:34:49 2021
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; Flow Summary                                                      ;
 +-------------------------+-----------------------------------------+
-; Flow Status             ; Successful - Thu Oct 14 11:34:52 2021   ;
+; Flow Status             ; Successful - Thu Oct 21 10:34:49 2021   ;
 ; Quartus II Version      ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name           ; marquee                                 ;
 ; Top-level Entity Name   ; marquee                                 ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM570T144C5                            ;
 ; Timing Models           ; Final                                   ;
 ; Met timing requirements ; Yes                                     ;
-; Total logic elements    ; 76 / 570 ( 13 % )                       ;
+; Total logic elements    ; 66 / 570 ( 12 % )                       ;
 ; Total pins              ; 14 / 116 ( 12 % )                       ;
 ; Total virtual pins      ; 0                                       ;
 ; UFM blocks              ; 0 / 1 ( 0 % )                           ;
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/14/2021 11:34:49 ;
+; Start date & time ; 10/21/2021 10:34:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; marquee             ;
 +-------------------+---------------------+
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +---------------------------------------+--------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                                ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+--------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 185188972840256.163418248906680      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 185188972840256.163478368617112      ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                   ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                    ; --            ; --          ; --             ;
 ; MISC_FILE                             ; C:/Verilog_Class/marquee/marquee.dpf ; --            ; --          ; --             ;
@@ -83,11 +83,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 250 MB              ; 00:00:00                           ;
-; Fitter                  ; 00:00:00     ; 1.0                     ; 262 MB              ; 00:00:00                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 224 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 195 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:00     ; --                      ; --                  ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 226 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:00     ; 1.0                     ; 235 MB              ; 00:00:00                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 205 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 176 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
