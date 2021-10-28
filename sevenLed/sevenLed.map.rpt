@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevenLed
-Thu Oct 21 11:32:54 2021
+Thu Oct 28 11:07:07 2021
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -42,12 +42,12 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 21 11:32:54 2021   ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 28 11:07:07 2021   ;
 ; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name               ; sevenLed                                ;
 ; Top-level Entity Name       ; sevenLed                                ;
 ; Family                      ; MAX II                                  ;
-; Total logic elements        ; 109                                     ;
+; Total logic elements        ; 530                                     ;
 ; Total pins                  ; 13                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                           ;
@@ -134,33 +134,33 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 109   ;
-;     -- Combinational with no register       ; 55    ;
-;     -- Register only                        ; 29    ;
-;     -- Combinational with a register        ; 25    ;
+; Total logic elements                        ; 530   ;
+;     -- Combinational with no register       ; 412   ;
+;     -- Register only                        ; 42    ;
+;     -- Combinational with a register        ; 76    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 21    ;
-;     -- 3 input functions                    ; 22    ;
-;     -- 2 input functions                    ; 27    ;
-;     -- 1 input functions                    ; 10    ;
+;     -- 4 input functions                    ; 196   ;
+;     -- 3 input functions                    ; 29    ;
+;     -- 2 input functions                    ; 261   ;
+;     -- 1 input functions                    ; 2     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 84    ;
-;     -- arithmetic mode                      ; 25    ;
+;     -- normal mode                          ; 288   ;
+;     -- arithmetic mode                      ; 242   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 50    ;
+;     -- asynchronous clear/load mode         ; 114   ;
 ;                                             ;       ;
-; Total registers                             ; 54    ;
-; Total logic cells in carry chains           ; 26    ;
+; Total registers                             ; 118   ;
+; Total logic cells in carry chains           ; 250   ;
 ; I/O pins                                    ; 13    ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 51    ;
-; Total fan-out                               ; 356   ;
-; Average fan-out                             ; 2.92  ;
+; Maximum fan-out                             ; 115   ;
+; Total fan-out                               ; 1734  ;
+; Average fan-out                             ; 3.19  ;
 +---------------------------------------------+-------+
 
 
@@ -169,7 +169,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |sevenLed                  ; 109 (109)   ; 54           ; 0          ; 13   ; 0            ; 55 (55)      ; 29 (29)           ; 25 (25)          ; 26 (26)         ; 0 (0)      ; |sevenLed           ; work         ;
+; |sevenLed                  ; 530 (530)   ; 118          ; 0          ; 13   ; 0            ; 412 (412)    ; 42 (42)           ; 76 (76)          ; 250 (250)       ; 0 (0)      ; |sevenLed           ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -179,12 +179,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 54    ;
+; Total registers                              ; 118   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 50    ;
+; Number of registers using Asynchronous Clear ; 114   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 55    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -194,19 +194,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; q[1][0]                                 ; 2       ;
-; q[2][0]                                 ; 2       ;
-; q[1][1]                                 ; 2       ;
-; q[0][1]                                 ; 2       ;
-; q[1][2]                                 ; 2       ;
-; q[0][2]                                 ; 2       ;
-; q[1][3]                                 ; 2       ;
-; q[0][3]                                 ; 2       ;
-; q[1][4]                                 ; 2       ;
-; q[0][4]                                 ; 2       ;
-; q[0][5]                                 ; 2       ;
-; q[3][5]                                 ; 2       ;
-; Total number of inverted registers = 12 ;         ;
+; q[3][0]                                 ; 3       ;
+; q[5][0]                                 ; 3       ;
+; q[1][0]                                 ; 3       ;
+; q[7][0]                                 ; 4       ;
+; q[4][0]                                 ; 3       ;
+; q[2][0]                                 ; 3       ;
+; q[0][0]                                 ; 5       ;
+; q[6][0]                                 ; 3       ;
+; q[3][1]                                 ; 3       ;
+; q[5][1]                                 ; 3       ;
+; q[1][1]                                 ; 3       ;
+; q[7][1]                                 ; 4       ;
+; q[4][1]                                 ; 3       ;
+; q[2][1]                                 ; 3       ;
+; q[0][1]                                 ; 5       ;
+; q[6][1]                                 ; 3       ;
+; q[3][2]                                 ; 3       ;
+; q[5][2]                                 ; 3       ;
+; q[1][2]                                 ; 3       ;
+; q[7][2]                                 ; 4       ;
+; q[4][2]                                 ; 3       ;
+; q[2][2]                                 ; 3       ;
+; q[0][2]                                 ; 5       ;
+; q[6][2]                                 ; 3       ;
+; q[3][3]                                 ; 3       ;
+; q[5][3]                                 ; 3       ;
+; q[1][3]                                 ; 3       ;
+; q[7][3]                                 ; 4       ;
+; q[4][3]                                 ; 3       ;
+; q[2][3]                                 ; 3       ;
+; q[0][3]                                 ; 5       ;
+; q[6][3]                                 ; 3       ;
+; q[3][4]                                 ; 3       ;
+; q[5][4]                                 ; 3       ;
+; q[1][4]                                 ; 3       ;
+; q[7][4]                                 ; 4       ;
+; q[4][4]                                 ; 3       ;
+; q[2][4]                                 ; 3       ;
+; q[0][4]                                 ; 5       ;
+; q[6][4]                                 ; 3       ;
+; q[3][5]                                 ; 3       ;
+; q[5][5]                                 ; 3       ;
+; q[1][5]                                 ; 3       ;
+; q[7][5]                                 ; 4       ;
+; q[4][5]                                 ; 3       ;
+; q[2][5]                                 ; 3       ;
+; q[0][5]                                 ; 5       ;
+; q[6][5]                                 ; 3       ;
+; q[3][6]                                 ; 3       ;
+; q[5][6]                                 ; 3       ;
+; q[1][6]                                 ; 3       ;
+; q[4][6]                                 ; 3       ;
+; q[2][6]                                 ; 3       ;
+; q[0][6]                                 ; 5       ;
+; q[6][6]                                 ; 3       ;
+; Total number of inverted registers = 55 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -215,7 +258,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; No         ; |sevenLed|Mux5             ;
+; 6:1                ; 42 bits   ; 168 LEs       ; 84 LEs               ; 84 LEs                 ; Yes        ; |sevenLed|q[4][6]          ;
+; 9:1                ; 13 bits   ; 78 LEs        ; 52 LEs               ; 26 LEs                 ; Yes        ; |sevenLed|q[7][5]          ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |sevenLed|Mux6             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -225,27 +270,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Thu Oct 21 11:32:53 2021
+    Info: Processing started: Thu Oct 28 11:07:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevenLed -c sevenLed
 Info: Found 1 design units, including 1 entities, in source file sevenLed.v
     Info: Found entity 1: sevenLed
 Info: Elaborating entity "sevenLed" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at sevenLed.v(27): truncated value with size 32 to match size of target (26)
-Warning (10230): Verilog HDL assignment warning at sevenLed.v(65): truncated value with size 32 to match size of target (3)
+Warning (10855): Verilog HDL warning at sevenLed.v(14): initial value for variable q should be constant
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(32): truncated value with size 32 to match size of target (26)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(143): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(149): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(151): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(153): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(155): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(157): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(159): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(161): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevenLed.v(163): truncated value with size 9 to match size of target (8)
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segout[6]" is stuck at VCC
     Warning (13410): Pin "segout[7]" is stuck at VCC
 Info: Registers with preset signals will power-up high
-Info: Implemented 122 device resources after synthesis - the final resource count might be different
+Info: Implemented 543 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 11 output pins
-    Info: Implemented 109 logic cells
+    Info: Implemented 530 logic cells
 Info: Generated suppressed messages file C:/Verilog_Class/sevenLed/sevenLed.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 227 megabytes
-    Info: Processing ended: Thu Oct 21 11:32:54 2021
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Thu Oct 28 11:07:08 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

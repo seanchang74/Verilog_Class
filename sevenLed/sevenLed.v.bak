@@ -1,4 +1,4 @@
-module sevenLedPattern (clk,reset,segout,scanout);
+module sevenLed (clk,reset,segout,scanout);
 input clk,reset;
 output reg[7:0] segout;
 output reg[2:0] scanout;
