@@ -1,5 +1,5 @@
 Analysis & Synthesis report for matrix8xRotate
-Thu Nov 04 10:19:28 2021
+Thu Nov 04 11:28:37 2021
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -13,9 +13,15 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Multiplexer Restructuring Statistics (Restructuring Performed)
-  9. Analysis & Synthesis Messages
- 10. Analysis & Synthesis Suppressed Messages
+  8. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod6
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -41,12 +47,12 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Nov 04 10:19:28 2021   ;
+; Analysis & Synthesis Status ; Successful - Thu Nov 04 11:28:37 2021   ;
 ; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name               ; matrix8xRotate                          ;
 ; Top-level Entity Name       ; matrix8xRotate                          ;
 ; Family                      ; MAX II                                  ;
-; Total logic elements        ; 94                                      ;
+; Total logic elements        ; 529                                     ;
 ; Total pins                  ; 13                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                           ;
@@ -119,13 +125,27 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+
-; matrix8xRotate.v                 ; yes             ; User Verilog HDL File  ; C:/Verilog_Class/matrix8xRotate/matrix8xRotate.v ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; matrix8xRotate.v                 ; yes             ; User Verilog HDL File        ; C:/Verilog_Class/matrix8xRotate/matrix8xRotate.v                 ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/81/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/81/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/81/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal81.inc                    ; yes             ; Megafunction                 ; c:/altera/81/quartus/libraries/megafunctions/aglobal81.inc       ;
+; db/lpm_divide_unl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/lpm_divide_unl.tdf            ;
+; db/sign_div_unsign_ckh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/sign_div_unsign_ckh.tdf       ;
+; db/alt_u_div_jie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/alt_u_div_jie.tdf             ;
+; db/add_sub_e7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_e7c.tdf               ;
+; db/add_sub_f7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_f7c.tdf               ;
+; db/add_sub_g7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_g7c.tdf               ;
+; db/add_sub_h7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_h7c.tdf               ;
+; db/add_sub_i7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_i7c.tdf               ;
+; db/add_sub_j7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_j7c.tdf               ;
+; db/add_sub_k7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Verilog_Class/matrix8xRotate/db/add_sub_k7c.tdf               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -133,43 +153,85 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 94    ;
-;     -- Combinational with no register       ; 63    ;
-;     -- Register only                        ; 13    ;
-;     -- Combinational with a register        ; 18    ;
+; Total logic elements                        ; 529   ;
+;     -- Combinational with no register       ; 496   ;
+;     -- Register only                        ; 1     ;
+;     -- Combinational with a register        ; 32    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 34    ;
-;     -- 3 input functions                    ; 16    ;
-;     -- 2 input functions                    ; 29    ;
-;     -- 1 input functions                    ; 2     ;
+;     -- 4 input functions                    ; 271   ;
+;     -- 3 input functions                    ; 88    ;
+;     -- 2 input functions                    ; 119   ;
+;     -- 1 input functions                    ; 50    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 69    ;
-;     -- arithmetic mode                      ; 25    ;
+;     -- normal mode                          ; 413   ;
+;     -- arithmetic mode                      ; 116   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
+;     -- synchronous clear/load mode          ; 27    ;
 ;     -- asynchronous clear/load mode         ; 26    ;
 ;                                             ;       ;
-; Total registers                             ; 31    ;
-; Total logic cells in carry chains           ; 26    ;
+; Total registers                             ; 33    ;
+; Total logic cells in carry chains           ; 150   ;
 ; I/O pins                                    ; 13    ;
-; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 31    ;
-; Total fan-out                               ; 329   ;
-; Average fan-out                             ; 3.07  ;
+; Maximum fan-out node                        ; i[0]  ;
+; Maximum fan-out                             ; 88    ;
+; Total fan-out                               ; 1740  ;
+; Average fan-out                             ; 3.21  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |matrix8xRotate            ; 94 (94)     ; 31           ; 0          ; 13   ; 0            ; 63 (63)      ; 13 (13)           ; 18 (18)          ; 26 (26)         ; 0 (0)      ; |matrix8xRotate     ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                   ; Library Name ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |matrix8xRotate                        ; 529 (362)   ; 33           ; 0          ; 13   ; 0            ; 496 (329)    ; 1 (1)             ; 32 (32)          ; 150 (60)        ; 0 (0)      ; |matrix8xRotate                                                                                                                       ; work         ;
+;    |lpm_divide:Mod0|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod0|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod1|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod1|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod2|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod2|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod3|                   ; 23 (0)      ; 0            ; 0          ; 0    ; 0            ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 23 (0)      ; 0            ; 0          ; 0    ; 0            ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 23 (0)      ; 0            ; 0          ; 0    ; 0            ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 23 (11)     ; 0            ; 0          ; 0    ; 0            ; 23 (11)      ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod3|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod4|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod4|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod5|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod5|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod6|                   ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6                                                                                                       ; work         ;
+;       |lpm_divide_unl:auto_generated|  ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6|lpm_divide_unl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_ckh:divider| ; 24 (0)      ; 0            ; 0          ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;             |alt_u_div_jie:divider|    ; 24 (11)     ; 0            ; 0          ; 0    ; 0            ; 24 (11)      ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider                       ; work         ;
+;                |add_sub_j7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;                |add_sub_k7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |matrix8xRotate|lpm_divide:Mod6|lpm_divide_unl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_jie:divider|add_sub_k7c:add_sub_6 ; work         ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -178,23 +240,175 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 31    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |matrix8xRotate|Mux70      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod6 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_unl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -203,159 +417,425 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Thu Nov 04 10:19:26 2021
+    Info: Processing started: Thu Nov 04 11:28:30 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off matrix8xRotate -c matrix8xRotate
 Info: Found 1 design units, including 1 entities, in source file matrix8xRotate.v
     Info: Found entity 1: matrix8xRotate
 Info: Elaborating entity "matrix8xRotate" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at matrix8xRotate.v(20): truncated value with size 32 to match size of target (26)
-Warning (10230): Verilog HDL assignment warning at matrix8xRotate.v(54): truncated value with size 32 to match size of target (4)
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(66): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(67): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(68): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(69): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(70): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(71): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(72): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(73): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Info (10041): Inferred latch for "q[15][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[15][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[14][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[13][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[12][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[11][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[10][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[9][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[8][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[7][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[6][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[5][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[4][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[3][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[2][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[1][7]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][0]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][1]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][2]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][3]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][4]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][5]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][6]" at matrix8xRotate.v(55)
-Info (10041): Inferred latch for "q[0][7]" at matrix8xRotate.v(55)
-Info: Implemented 107 device resources after synthesis - the final resource count might be different
+Warning (10230): Verilog HDL assignment warning at matrix8xRotate.v(89): truncated value with size 32 to match size of target (6)
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(105): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(106): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(107): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(108): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(109): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(110): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(111): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at matrix8xRotate.v(112): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10030): Net "q[44][7]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][6]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][5]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][4]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][3]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][2]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][1]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q[44][0]" at matrix8xRotate.v(11) has no driver or initial value, using a default initial value '0'
+Info (10041): Inferred latch for "q[43][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[43][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[42][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[41][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[40][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[39][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[38][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[37][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[36][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[35][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[34][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[33][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[32][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[31][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[30][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[29][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[28][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[27][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[26][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[25][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[24][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[23][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[22][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[21][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[20][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[19][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[18][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[17][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[16][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[15][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[14][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[13][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[12][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[11][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[10][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[9][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[8][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[7][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[6][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[5][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[4][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[3][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[2][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[1][7]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][0]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][1]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][2]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][3]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][4]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][5]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][6]" at matrix8xRotate.v(94)
+Info (10041): Inferred latch for "q[0][7]" at matrix8xRotate.v(94)
+Info: Inferred 7 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod6"
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "7"
+    Info: Parameter "LPM_WIDTHD" = "6"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_unl.tdf
+    Info: Found entity 1: lpm_divide_unl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ckh.tdf
+    Info: Found entity 1: sign_div_unsign_ckh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_jie.tdf
+    Info: Found entity 1: alt_u_div_jie
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_e7c.tdf
+    Info: Found entity 1: add_sub_e7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f7c.tdf
+    Info: Found entity 1: add_sub_f7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_g7c.tdf
+    Info: Found entity 1: add_sub_g7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_h7c.tdf
+    Info: Found entity 1: add_sub_h7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_i7c.tdf
+    Info: Found entity 1: add_sub_i7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_j7c.tdf
+    Info: Found entity 1: add_sub_j7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_k7c.tdf
+    Info: Found entity 1: add_sub_k7c
+Info: Implemented 542 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 11 output pins
-    Info: Implemented 94 logic cells
+    Info: Implemented 529 logic cells
 Info: Generated suppressed messages file C:/Verilog_Class/matrix8xRotate/matrix8xRotate.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 227 megabytes
-    Info: Processing ended: Thu Nov 04 10:19:28 2021
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Thu Nov 04 11:28:38 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

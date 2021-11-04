@@ -1,5 +1,5 @@
 Flow report for matrix8xRotate
-Thu Nov 04 10:19:33 2021
+Thu Nov 04 11:28:49 2021
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; Flow Summary                                                      ;
 +-------------------------+-----------------------------------------+
-; Flow Status             ; Successful - Thu Nov 04 10:19:33 2021   ;
+; Flow Status             ; Successful - Thu Nov 04 11:28:49 2021   ;
 ; Quartus II Version      ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name           ; matrix8xRotate                          ;
 ; Top-level Entity Name   ; matrix8xRotate                          ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM570T144C5                            ;
 ; Timing Models           ; Final                                   ;
 ; Met timing requirements ; Yes                                     ;
-; Total logic elements    ; 87 / 570 ( 15 % )                       ;
+; Total logic elements    ; 528 / 570 ( 93 % )                      ;
 ; Total pins              ; 13 / 116 ( 11 % )                       ;
 ; Total virtual pins      ; 0                                       ;
 ; UFM blocks              ; 0 / 1 ( 0 % )                           ;
@@ -58,23 +58,24 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/04/2021 10:19:26 ;
+; Start date & time ; 11/04/2021 11:28:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; matrix8xRotate      ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+---------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+---------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 185188972840256.163599236604284 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --             ;
-; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS    ; Off                             ; --            ; --          ; eda_blast_fpga ;
-+---------------------------------------+---------------------------------+---------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                          ;
++---------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                       ; Value                                              ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                 ; 185188972840256.163599651010764                    ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                                                 ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                                                  ; --            ; --          ; --             ;
+; MISC_FILE                             ; C:/Verilog_Class/matrix8xRotate/matrix8xRotate.dpf ; --            ; --          ; --             ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                                               ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS    ; Off                                                ; --            ; --          ; eda_blast_fpga ;
++---------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -82,11 +83,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 227 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 236 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 205 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 177 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 230 MB              ; 00:00:07                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 238 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 207 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 178 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:14     ; --                      ; --                  ; 00:00:12                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

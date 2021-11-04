@@ -33,7 +33,7 @@ ON
 # case_sensitive
 # source_file
 matrix8xRotate.v
-fcc3a396e1db9aa1a7fa704870b8
+b83e805ddb7352dfa3d08f335cd013ba
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -53,6 +53,780 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide
+# storage
+db|matrix8xRotate.(1).cnf
+db|matrix8xRotate.(1).cnf
+# case_insensitive
+# source_file
+..|..|altera|81|quartus|libraries|megafunctions|lpm_divide.tdf
+ed36a71dff4e1711978884156a526e26
+7
+# user_parameter {
+LPM_WIDTHN
+7
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+6
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_unl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+remain5
+-1
+3
+remain4
+-1
+3
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom4
+-1
+1
+denom1
+-1
+1
+denom0
+-1
+1
+denom5
+-1
+2
+denom3
+-1
+2
+denom2
+-1
+2
+}
+# include_file {
+..|..|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+..|..|altera|81|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+..|..|altera|81|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_unl
+# storage
+db|matrix8xRotate.(2).cnf
+db|matrix8xRotate.(2).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_unl.tdf
+a4d32f475dda7ff26c773cc8654190
+7
+# used_port {
+remain5
+-1
+3
+remain4
+-1
+3
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom5
+-1
+3
+denom4
+-1
+3
+denom3
+-1
+3
+denom2
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+sign_div_unsign_ckh
+# storage
+db|matrix8xRotate.(3).cnf
+db|matrix8xRotate.(3).cnf
+# case_insensitive
+# source_file
+db|sign_div_unsign_ckh.tdf
+797b241b3ed023fd7e127ffb994356a
+7
+# used_port {
+remainder5
+-1
+3
+remainder4
+-1
+3
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator6
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator5
+-1
+3
+denominator4
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+alt_u_div_jie
+# storage
+db|matrix8xRotate.(4).cnf
+db|matrix8xRotate.(4).cnf
+# case_insensitive
+# source_file
+db|alt_u_div_jie.tdf
+78f8987ec2b6fc705ca633556483eb5b
+7
+# used_port {
+remainder5
+-1
+3
+remainder4
+-1
+3
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator6
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator5
+-1
+3
+denominator4
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_e7c
+# storage
+db|matrix8xRotate.(5).cnf
+db|matrix8xRotate.(5).cnf
+# case_insensitive
+# source_file
+db|add_sub_e7c.tdf
+5f8c39fe08b931fcdcfff36f9d1c791
+7
+# used_port {
+result0
+-1
+3
+datab0
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_f7c
+# storage
+db|matrix8xRotate.(6).cnf
+db|matrix8xRotate.(6).cnf
+# case_insensitive
+# source_file
+db|add_sub_f7c.tdf
+2bea588149cc7552cfa3ec85c712754
+7
+# used_port {
+result1
+-1
+3
+result0
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_g7c
+# storage
+db|matrix8xRotate.(7).cnf
+db|matrix8xRotate.(7).cnf
+# case_insensitive
+# source_file
+db|add_sub_g7c.tdf
+5797e2fd452d919020669eb783133be
+7
+# used_port {
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_h7c
+# storage
+db|matrix8xRotate.(8).cnf
+db|matrix8xRotate.(8).cnf
+# case_insensitive
+# source_file
+db|add_sub_h7c.tdf
+982c8364c5516d60e8a3f281cc7d485
+7
+# used_port {
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_i7c
+# storage
+db|matrix8xRotate.(9).cnf
+db|matrix8xRotate.(9).cnf
+# case_insensitive
+# source_file
+db|add_sub_i7c.tdf
+df31201ea812e7add310bd7d52243220
+7
+# used_port {
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_j7c
+# storage
+db|matrix8xRotate.(10).cnf
+db|matrix8xRotate.(10).cnf
+# case_insensitive
+# source_file
+db|add_sub_j7c.tdf
+4a69a8cde18f167936e71d39096fe8e
+7
+# used_port {
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_k7c
+# storage
+db|matrix8xRotate.(11).cnf
+db|matrix8xRotate.(11).cnf
+# case_insensitive
+# source_file
+db|add_sub_k7c.tdf
+c85bf5a9dd64d34b682399437c189111
+7
+# used_port {
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
 }
 # macro_sequence
 
