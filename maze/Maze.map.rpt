@@ -1,0 +1,322 @@
+Analysis & Synthesis report for Maze
+Thu Dec 16 09:47:59 2021
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Dec 16 09:47:59 2021   ;
+; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name               ; Maze                                    ;
+; Top-level Entity Name       ; Maze                                    ;
+; Family                      ; MAX II                                  ;
+; Total logic elements        ; 575                                     ;
+; Total pins                  ; 18                                      ;
+; Total virtual pins          ; 0                                       ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                           ;
++-----------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EPM570T144C5       ;                    ;
+; Top-level entity name                                          ; Maze               ; Maze               ;
+; Family name                                                    ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Perform gate-level register retiming                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax         ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; Maze.v                           ; yes             ; User Verilog HDL File  ; C:/Verilog_Class/maze/Maze.v ;
++----------------------------------+-----------------+------------------------+------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 575   ;
+;     -- Combinational with no register       ; 500   ;
+;     -- Register only                        ; 13    ;
+;     -- Combinational with a register        ; 62    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 419   ;
+;     -- 3 input functions                    ; 99    ;
+;     -- 2 input functions                    ; 43    ;
+;     -- 1 input functions                    ; 1     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 550   ;
+;     -- arithmetic mode                      ; 25    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 2     ;
+;     -- asynchronous clear/load mode         ; 48    ;
+;                                             ;       ;
+; Total registers                             ; 75    ;
+; Total logic cells in carry chains           ; 26    ;
+; I/O pins                                    ; 18    ;
+; Maximum fan-out node                        ; y[1]  ;
+; Maximum fan-out                             ; 98    ;
+; Total fan-out                               ; 2213  ;
+; Average fan-out                             ; 3.73  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |Maze                      ; 575 (575)   ; 75           ; 0          ; 18   ; 0            ; 500 (500)    ; 13 (13)           ; 62 (62)          ; 26 (26)         ; 0 (0)      ; |Maze               ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; posX[2]                                    ; Merged with x[2]                       ;
+; posX[1]                                    ; Merged with x[1]                       ;
+; posX[0]                                    ; Merged with x[0]                       ;
+; posY[2]                                    ; Merged with y[2]                       ;
+; posY[1]                                    ; Merged with y[1]                       ;
+; posY[0]                                    ; Merged with y[0]                       ;
+; q[1,3,9,14,17..18,22,55]                   ; Merged with q[61]                      ;
+; q[12,20,30,32..33,35,37..38,43..44,49..51] ; Merged with q[53]                      ;
+; q[53]                                      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 28     ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 75    ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; q[24]                                   ; 3       ;
+; q[40]                                   ; 3       ;
+; q[8]                                    ; 3       ;
+; q[56]                                   ; 3       ;
+; q[16]                                   ; 3       ;
+; q[48]                                   ; 3       ;
+; q[25]                                   ; 3       ;
+; q[41]                                   ; 4       ;
+; q[57]                                   ; 3       ;
+; q[10]                                   ; 3       ;
+; q[42]                                   ; 4       ;
+; q[2]                                    ; 3       ;
+; q[34]                                   ; 4       ;
+; q[26]                                   ; 3       ;
+; q[58]                                   ; 3       ;
+; q[11]                                   ; 4       ;
+; q[19]                                   ; 4       ;
+; q[27]                                   ; 3       ;
+; q[59]                                   ; 3       ;
+; q[52]                                   ; 3       ;
+; q[36]                                   ; 3       ;
+; q[4]                                    ; 3       ;
+; q[28]                                   ; 3       ;
+; q[60]                                   ; 3       ;
+; q[13]                                   ; 3       ;
+; q[5]                                    ; 3       ;
+; q[21]                                   ; 3       ;
+; q[29]                                   ; 3       ;
+; q[45]                                   ; 3       ;
+; q[46]                                   ; 3       ;
+; q[54]                                   ; 4       ;
+; q[6]                                    ; 3       ;
+; q[62]                                   ; 3       ;
+; q[31]                                   ; 3       ;
+; q[47]                                   ; 3       ;
+; q[15]                                   ; 3       ;
+; q[63]                                   ; 3       ;
+; q[23]                                   ; 3       ;
+; q[39]                                   ; 4       ;
+; q[7]                                    ; 3       ;
+; Total number of inverted registers = 40 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Maze|q[53]                ;
+; 5:1                ; 40 bits   ; 120 LEs       ; 80 LEs               ; 40 LEs                 ; Yes        ; |Maze|q[10]                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Maze|q~328                ;
+; 4:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; No         ; |Maze|q~321                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Maze|q~526                ;
+; 4:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; No         ; |Maze|q~569                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Maze|q~130                ;
+; 4:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; No         ; |Maze|q~135                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Maze|posY~15              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Maze|Mux11                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Thu Dec 16 09:47:53 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maze -c Maze
+Info: Found 1 design units, including 1 entities, in source file Maze.v
+    Info: Found entity 1: Maze
+Info: Elaborating entity "Maze" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Maze.v(17): truncated value with size 32 to match size of target (26)
+Warning (10230): Verilog HDL assignment warning at Maze.v(44): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Maze.v(57): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Maze.v(70): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Maze.v(83): truncated value with size 32 to match size of target (3)
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(112): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(114): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(116): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(118): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(120): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(122): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(124): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Maze.v(126): variable "q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info: Registers with preset signals will power-up high
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk20"
+Info: Implemented 593 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 11 output pins
+    Info: Implemented 575 logic cells
+Info: Generated suppressed messages file C:/Verilog_Class/maze/Maze.map.smsg
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 228 megabytes
+    Info: Processing ended: Thu Dec 16 09:47:59 2021
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Verilog_Class/maze/Maze.map.smsg.
+
+
