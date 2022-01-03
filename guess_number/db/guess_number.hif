@@ -1,0 +1,892 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+41
+2716
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+guess_number
+# storage
+db|guess_number.(0).cnf
+db|guess_number.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+guess_number.v
+4e139a5d4af61d898c25df131e19cd22
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide
+# storage
+db|guess_number.(1).cnf
+db|guess_number.(1).cnf
+# case_insensitive
+# source_file
+..|..|altera|81|quartus|libraries|megafunctions|lpm_divide.tdf
+ed36a71dff4e1711978884156a526e26
+7
+# user_parameter {
+LPM_WIDTHN
+4
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+4
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_pnl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom2
+-1
+1
+denom0
+-1
+1
+denom3
+-1
+2
+denom1
+-1
+2
+}
+# include_file {
+..|..|altera|81|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+..|..|altera|81|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+..|..|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_pnl
+# storage
+db|guess_number.(2).cnf
+db|guess_number.(2).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_pnl.tdf
+1634707f77ccbc596315b32737b11d6
+7
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom3
+-1
+3
+denom2
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+sign_div_unsign_7kh
+# storage
+db|guess_number.(3).cnf
+db|guess_number.(3).cnf
+# case_insensitive
+# source_file
+db|sign_div_unsign_7kh.tdf
+155e8689c5264b14c206c49392e5966
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+alt_u_div_9ie
+# storage
+db|guess_number.(4).cnf
+db|guess_number.(4).cnf
+# case_insensitive
+# source_file
+db|alt_u_div_9ie.tdf
+eeba4de826b213df74ec1a70887ca79
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_e7c
+# storage
+db|guess_number.(5).cnf
+db|guess_number.(5).cnf
+# case_insensitive
+# source_file
+db|add_sub_e7c.tdf
+5f8c39fe08b931fcdcfff36f9d1c791
+7
+# used_port {
+result0
+-1
+3
+datab0
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_f7c
+# storage
+db|guess_number.(6).cnf
+db|guess_number.(6).cnf
+# case_insensitive
+# source_file
+db|add_sub_f7c.tdf
+2bea588149cc7552cfa3ec85c712754
+7
+# used_port {
+result1
+-1
+3
+result0
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_g7c
+# storage
+db|guess_number.(7).cnf
+db|guess_number.(7).cnf
+# case_insensitive
+# source_file
+db|add_sub_g7c.tdf
+5797e2fd452d919020669eb783133be
+7
+# used_port {
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_h7c
+# storage
+db|guess_number.(8).cnf
+db|guess_number.(8).cnf
+# case_insensitive
+# source_file
+db|add_sub_h7c.tdf
+982c8364c5516d60e8a3f281cc7d485
+7
+# used_port {
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide
+# storage
+db|guess_number.(9).cnf
+db|guess_number.(9).cnf
+# case_insensitive
+# source_file
+..|..|altera|81|quartus|libraries|megafunctions|lpm_divide.tdf
+ed36a71dff4e1711978884156a526e26
+7
+# user_parameter {
+LPM_WIDTHN
+5
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+4
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_qnl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom2
+-1
+1
+denom0
+-1
+1
+denom3
+-1
+2
+denom1
+-1
+2
+}
+# include_file {
+..|..|altera|81|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+..|..|altera|81|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+..|..|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_qnl
+# storage
+db|guess_number.(10).cnf
+db|guess_number.(10).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_qnl.tdf
+82b65d48c89720bde86eeae5c80476f
+7
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom3
+-1
+3
+denom2
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+sign_div_unsign_8kh
+# storage
+db|guess_number.(11).cnf
+db|guess_number.(11).cnf
+# case_insensitive
+# source_file
+db|sign_div_unsign_8kh.tdf
+abbd7cd447c2a2aad5a8d19f21562db
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+alt_u_div_bie
+# storage
+db|guess_number.(12).cnf
+db|guess_number.(12).cnf
+# case_insensitive
+# source_file
+db|alt_u_div_bie.tdf
+9171cbd4cc770438ff03188aee8ef39
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_i7c
+# storage
+db|guess_number.(13).cnf
+db|guess_number.(13).cnf
+# case_insensitive
+# source_file
+db|add_sub_i7c.tdf
+df31201ea812e7add310bd7d52243220
+7
+# used_port {
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# complete
+

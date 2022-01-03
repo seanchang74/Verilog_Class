@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Jan 03 17:00:04 2022
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : guess_number
+Top-level Entity Name : guess_number
+Family : MAX II
+Device : EPM570T144C5
+Timing Models : Final
+Total logic elements : 525 / 570 ( 92 % )
+Total pins : 17 / 116 ( 15 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
